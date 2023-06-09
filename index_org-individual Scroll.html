@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -28,31 +29,25 @@
         background: rgba(131, 145, 155, 0.54);
       }
       body {
-        background-color: #020d1c; 
+        background-color: #020d1c;
+        overflow-x: hidden;
+        overflow-y: auto;
         border: 0;
         margin: 0;
         padding: 0;
       }
-      #container {
-        
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: auto;
         /*background-color: rebeccapurple; */
         border: 0;
         margin: 0;
         padding: 0;
-       
-            width: 100%;
-            height: auto;
-            /* background-color: red; */
-            display: flex;
-            flex-direction: row;
-            color: aliceblue;
-            overflow-x: hidden;
-            overflow-y: auto;
-            justify-content: center;
       }
       #sq {
-        /*height: 800px;*/
-        height: 100%;
+        height: 800px;
         width: 140px;
         border: 0;
         margin: 0;
@@ -63,8 +58,8 @@
         overflow: auto;
       }
       #dp {
-        height: 100%;
-        width: 24px;
+        height: auto;
+        width: 38px;
         border: 0;
         margin: 0;
         padding: 0;
@@ -74,7 +69,7 @@
         overflow: auto;
       }
       #tp {
-        height: 100%;
+        height: auto;
         width: 46px;
         border: 0;
         margin: 0;
@@ -85,7 +80,7 @@
         overflow: auto;
       }
       #sp {
-        height: 100%;
+        height: auto;
         width: 46px;
         border: 0;
         margin: 0;
@@ -96,7 +91,7 @@
         overflow: auto;
       }
       #tk {
-        height: 100%;
+        height: auto;
         width: 88px;
         border: 0;
         margin: 0;
@@ -109,48 +104,19 @@
     </style>
   </head>
   <body>
-    <div id="container">
+    <div class="container">
       <!-- <iframe id="dp" src="https://faus1000.github.io/gtrack/"></iframe> -->
 
       <!-- <iframe id="dp" src="https://faus1000.github.io/dual-patterns/"></iframe> -->
-      <!-- <iframe id="sp" src="https://faus1000.github.io/one/"></iframe> -->
-      <!-- <iframe id="tp" src="https://faus1000.github.io/groups/"></iframe> -->
-      <!-- <iframe id="tk" src="https://faus1000.github.io/tickdigit/index-sidebar-up.html"></iframe> -->
-      <!-- <iframe id="dp" src="https://faus1000.github.io/groupsview/"></iframe> -->
-      <!-- <iframe id="sq" src="https://faus1000.github.io/squareview/"></iframe> -->
-      <iframe id="sp" src="./one.html"></iframe>
-      <iframe id="tp" src="./gg.html"></iframe>
-      <iframe id="tk" src="./tickv.html"></iframe>
-      <iframe id="dp" src="./gv.html"></iframe>
-      <iframe id="sq" src="./sqv.html"></iframe>
+      <iframe id="sp" src="https://faus1000.github.io/one/"></iframe>
+      <iframe id="tp" src="https://faus1000.github.io/groups/"></iframe>
+      <iframe
+        id="tk"
+        src="https://faus1000.github.io/tickdigit/index-sidebar-up.html"
+      ></iframe>
+      <!-- añadir el digit count system con formato vertical y esquema squareview -->
+      <iframe id="dp" src="https://faus1000.github.io/groupsview/"></iframe>
+      <iframe id="sq" src="https://faus1000.github.io/squareview/"></iframe>
     </div>
-    <!-- añadir el digit count system con formato vertical y esquema squareview -->
-    <script>
-      var alto = 22;
-      var cnt = document.getElementById("container");
-      /*
-      var symbol = "R_100";
-      var decimals = 2;
-     var ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=1089');
-  
-  ws.onopen = function (evt) {
-      ws.send(JSON.stringify({ticks:symbol}));
-  }; 
-  
-  ws.onmessage = function (msg) { 
-    
-      var data = JSON.parse(msg.data); 
-      var digit = Number(data.tick.quote).toFixed(decimals).slice(-1);
-  
-      console.log(digit);
-     
-  }*/
-
-  setInterval(function (){
-    alto += 21;
-    cnt.style.height = alto + "px";
-    console.log("subiendo: " + alto+ "px");
-  },2000)
-  </script>
   </body>
 </html>
