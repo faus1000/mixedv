@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mixed Verticals</title>
+    <style>
+      /* width */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: transparent;
+        border-radius: 6px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgba(131, 145, 155, 0.54);
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(131, 145, 155, 0.54);
+      }
+      body {
+        background-color: #020d1c; 
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+      #container {
+        
+        /*background-color: rebeccapurple; */
+        border: 0;
+        margin: 0;
+        padding: 0;
+       
+            width: 100%;
+            height: auto;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: row;
+            color: aliceblue;
+            overflow-x: hidden;
+            overflow-y: auto;
+            justify-content: center;
+      }
+      #sq {
+        /*height: 800px;*/
+        height: 100%;
+        width: 140px;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #sq:hover {
+        overflow: auto;
+      }
+      #dp {
+        height: 100%;
+        width: 24px;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #dp:hover {
+        overflow: auto;
+      }
+      #tp {
+        height: 100%;
+        width: 46px;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #tp:hover {
+        overflow: auto;
+      }
+      #sp {
+        height: 100%;
+        width: 46px;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #sp:hover {
+        overflow: auto;
+      }
+      #tk {
+        height: 100%;
+        width: 88px;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #tk:hover {
+        overflow: auto;
+      }
+      #sa {
+        /*height: 800px;*/
+        height: 100%;
+        width: 163px;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        margin-left: 4px;
+      }
+      #sa:hover {
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <!-- <iframe id="dp" src="https://faus1000.github.io/gtrack/"></iframe> -->
+
+      <!-- <iframe id="dp" src="https://faus1000.github.io/dual-patterns/"></iframe> -->
+      <!-- <iframe id="sp" src="https://faus1000.github.io/one/"></iframe> -->
+      <!-- <iframe id="tp" src="https://faus1000.github.io/groups/"></iframe> -->
+      <!-- <iframe id="tk" src="https://faus1000.github.io/tickdigit/index-sidebar-up.html"></iframe> -->
+      <!-- <iframe id="dp" src="https://faus1000.github.io/groupsview/"></iframe> -->
+      <!-- <iframe id="sq" src="https://faus1000.github.io/squareview/"></iframe> -->
+      <iframe id="tk" src="./tickv.html"></iframe>
+      <iframe id="sp" src="./one.html"></iframe>
+      <iframe id="tp" src="./gg.html"></iframe>
+      <iframe id="dp" src="./gv.html"></iframe>
+      <!-- <iframe id="sq" src="./sqv.html"></iframe> -->
+      <iframe id="sa" src="./sad.html"></iframe>
+    </div>
+    <!-- añadir el digit count system con formato vertical y esquema squareview -->
+    <script>
+      var alto = 22;
+      var cnt = document.getElementById("container");
+      /*
+      var symbol = "R_100";
+      var decimals = 2;
+     var ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=1089');
+  
+  ws.onopen = function (evt) {
+      ws.send(JSON.stringify({ticks:symbol}));
+  }; 
+  
+  ws.onmessage = function (msg) { 
+    
+      var data = JSON.parse(msg.data); 
+      var digit = Number(data.tick.quote).toFixed(decimals).slice(-1);
+  
+      console.log(digit);
+     
+  }*/
+
+  setInterval(function (){
+    alto += 21;
+    cnt.style.height = alto + "px";
+    console.log("subiendo: " + alto+ "px");
+  },2000)
+  </script>
+  </body>
+</html>
